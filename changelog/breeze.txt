@@ -1,10 +1,27 @@
 Project Infinity-X 4.2 for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
+Release Date: 08.11.2026
 ========================================================================
 
-- Initial Android 17 Official Release (Project Infinity-X 4.2)
-- Upstream Project Infinity-X & LineageOS CAF HAL integration
-- Core GApps Footprint with Google Communications Suite (Contacts, Dialer, Messages)
-- Stock Xiaomi HyperOS Camera (MiuiCamera) + LineageOS Aperture dual camera support
-- LineageOS Quick Settings layout (dedicated Wi-Fi and Cell data tiles with direct radio toggles)
-- Official Google LatinIME gesture/swipe typing library integration
-- Private release-keys signed build
+Camera & Imaging:
+- Fix Portrait Mode single bokeh photo processing stalling in MediaStore (libanc bokeh same_process_hal labeling)
+- Fix Photo Mode 4-take capture freeze (increased maxHalRequests to 12 in CamX HAL)
+- Fix NULL pointer dereference in ExtSkipPreviewFrame during photo and portrait capture
+- Support third-party gallery launchers (Google Photos, Gallery) directly from camera preview
+- Update HyperOS adaptive camera icon and hidden API allowlist
+
+Display & Panel:
+- Correct default peak refresh rate to native 120Hz panel ceiling
+- Enable dynamic refresh rate downscaling (120Hz -> 60/30Hz on static content) with 200ms idle timer
+- Enable asynchronous display power mode for instant screen off and faster deep sleep transition
+- Set SurfaceFlinger idle render timer to 600ms
+
+Battery & Power:
+- Disable Always-On Display (AOD) by default for IPS LCD backlight power saving
+- Restore pickup-to-wake gesture pulse
+- Strip background Google bloatware (TalkBack, SwitchAccess, AndroidAuto, DevicePolicy) under Core GApps
+- Decouple auto-suspend mode from display transition states
+
+System & Hardware:
+- Full room-wide Consumer IR blaster range and zero transmission latency via SPI carrier modulation fix
+- Add Novatek and Focaltech touchscreen recovery firmware and touch calibration
+- Integrate official InfinityX-OTA updater endpoints
