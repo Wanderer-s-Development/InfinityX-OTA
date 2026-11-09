@@ -1,25 +1,24 @@
 Project Infinity-X 4.2 for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
-Release Date: 08.11.2026
+Release Date: 09.11.2026
 ========================================================================
+
+Radio & Telephony:
+- Revert experimental radio RAT combining and forced dual connectivity properties
+- Fix SIM detected but "No Service" on boot
+- Sync modem procedure byte handling (procedure_bytes=SKIP) and APM power states with stock HyperOS
 
 Camera & Imaging:
 - Fix Portrait Mode single bokeh photo processing stalling in MediaStore (libanc bokeh same_process_hal labeling)
 - Fix Photo Mode 4-take capture freeze (increased maxHalRequests to 12 in CamX HAL)
-- Fix NULL pointer dereference in ExtSkipPreviewFrame during photo and portrait capture
-- Support third-party gallery launchers (Google Photos, Gallery) directly from camera preview
-- Update HyperOS adaptive camera icon and hidden API allowlist
+- Synchronize camera.disable_zsl_mode=true to ensure smooth multi-frame HDR/burst processing
+- Include Google Photos prebuilt while preserving Glimpse Gallery
 
-Display & Panel:
+Display & Power:
 - Correct default peak refresh rate to native 120Hz panel ceiling
-- Enable dynamic refresh rate downscaling (120Hz -> 60/30Hz on static content) with 200ms idle timer
-- Enable asynchronous display power mode for instant screen off and faster deep sleep transition
-- Set SurfaceFlinger idle render timer to 600ms
-
-Battery & Power:
+- Enable dynamic refresh rate downscaling with 200ms idle timer
+- Enable asynchronous display power mode for instant screen off
 - Disable Always-On Display (AOD) by default for IPS LCD backlight power saving
 - Restore pickup-to-wake gesture pulse
-- Strip background Google bloatware (TalkBack, SwitchAccess, AndroidAuto, DevicePolicy) under Core GApps
-- Decouple auto-suspend mode from display transition states
 
 System & Hardware:
 - Full room-wide Consumer IR blaster range and zero transmission latency via SPI carrier modulation fix
