@@ -3,6 +3,9 @@ Release Date: 09.11.2026
 ========================================================================
 
 Camera & Imaging:
+- Fix Regional Watermark: Mapped Indian region (ro.miui.build.region=in and ro.product.mod_device=breeze_in_global) so device watermark dynamically displays "Redmi 13 5G" or "POCO M6 Plus 5G" instead of "Redmi Note 13R 5G"
+- Expose Video Stabilization (EIS) Toggle: Unlocked Movie Solid / EIS switch in Video settings and top bar, keeping it OFF by default so users have full manual control
+- Enable Document Mode: Activated built-in HyperOS document scanning mode (0xba) with full perspective crop and document processing
 - Fix Inverted / Blue Color Defect: Corrected native NV21 chroma plane base offset in libcamera_mianode_jni.xiaomi.so and libcamera_algoup_jni.xiaomi.so (mov w2, #2), eliminating inverted colors and cyan skin tones across all captured photos
 - Fix HDR Controls: Restored HDR toggle button (Auto / On / Off) in HyperOS Camera top bar by bypassing AOSP CamX vendor tag check
 - Enable Auto HDR: Added support_camera_aohdr device feature flag for breeze
