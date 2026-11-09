@@ -2,16 +2,17 @@ Project Infinity-X 4.2 for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
 Release Date: 09.11.2026
 ========================================================================
 
+Camera & Imaging:
+- Fix inverted/bluish colors and orange tint across Photo, Portrait, and Night modes (restored proper UV chroma plane alignment in libcamera_mianode_jni and libcamera_algoup_jni)
+- Fix photo saving pipeline: restored standard isParallel queue handling in MiuiCamera to ensure captured images save reliably to storage
+- Restore continuous 3A convergence (AWB/AE) via camera.disable_zsl_mode=0 for true-to-life color rendering
+- Full support for 108MP Ultra HD mode with hardware remosaic and downscale bypass
+- Include Google Photos prebuilt while preserving Glimpse Gallery
+
 Radio & Telephony:
 - Revert experimental radio RAT combining and forced dual connectivity properties
 - Fix SIM detected but "No Service" on boot
 - Sync modem procedure byte handling (procedure_bytes=SKIP) and APM power states with stock HyperOS
-
-Camera & Imaging:
-- Fix Portrait Mode single bokeh photo processing stalling in MediaStore (libanc bokeh same_process_hal labeling)
-- Fix Photo Mode 4-take capture freeze (increased maxHalRequests to 12 in CamX HAL)
-- Synchronize camera.disable_zsl_mode=true to ensure smooth multi-frame HDR/burst processing
-- Include Google Photos prebuilt while preserving Glimpse Gallery
 
 Display & Power:
 - Correct default peak refresh rate to native 120Hz panel ceiling
