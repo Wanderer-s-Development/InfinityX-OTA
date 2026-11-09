@@ -3,6 +3,8 @@ Release Date: 09.11.2026
 ========================================================================
 
 Camera & Imaging:
+- Fix Camera Crash (VerifyError in Z5.e.V1): Eliminated Dalvik bytecode corruption in CameraCapabilitiesUtil caused by orphaned instruction units; verified 100% clean on Android Runtime (ART) dex verifier
+- Enable Standalone Document Mode: Configured isSupportDocumentMode1 (P=1) so Document Mode appears and functions crash-free in the camera carousel
 - Fix Regional Watermark: Mapped Indian region (ro.miui.build.region=in and ro.product.mod_device=breeze_in_global) so device watermark dynamically displays "Redmi 13 5G" or "POCO M6 Plus 5G" instead of "Redmi Note 13R 5G"
 - Expose Video Stabilization (EIS) Toggle: Unlocked Movie Solid / EIS switch in Video settings and top bar, keeping it OFF by default so users have full manual control
 - Enable Document Mode: Activated built-in HyperOS document scanning mode (0xba) with full perspective crop and document processing
