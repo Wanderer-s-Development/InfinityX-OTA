@@ -3,7 +3,9 @@ Release Date: 09.11.2026
 ========================================================================
 
 Camera & Imaging:
-- Fix inverted/bluish colors and orange tint across Photo, Portrait, and Night modes (restored proper UV chroma plane alignment in libcamera_mianode_jni and libcamera_algoup_jni)
+- Fix Inverted / Blue Color Defect: Corrected native NV21 chroma plane base offset in libcamera_mianode_jni.xiaomi.so and libcamera_algoup_jni.xiaomi.so (mov w2, #2), eliminating inverted colors and cyan skin tones across all captured photos
+- Fix HDR Controls: Restored HDR toggle button (Auto / On / Off) in HyperOS Camera top bar by bypassing AOSP CamX vendor tag check
+- Enable Auto HDR: Added support_camera_aohdr device feature flag for breeze
 - Fix photo saving pipeline: restored standard isParallel queue handling in MiuiCamera to ensure captured images save reliably to storage
 - Restore continuous 3A convergence (AWB/AE) via camera.disable_zsl_mode=0 for true-to-life color rendering
 - Full support for 108MP Ultra HD mode with hardware remosaic and downscale bypass
