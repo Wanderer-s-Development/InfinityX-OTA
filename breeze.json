@@ -1,3 +1,13 @@
 {
-  "response": []
+  "response": [
+    {
+      "filename": "Project_Infinity-X-4.2-breeze-10.11.2026-GAPPS-RELEASE.zip",
+      "download": "https://github.com/Wanderer-s-Development/InfinityX-OTA/releases/download/v4.2-breeze-10.11.2026/Project_Infinity-X-4.2-breeze-10.11.2026-GAPPS-RELEASE.zip",
+      "timestamp": 1794309940,
+      "md5": "bb97226143b2a8dee2389d2db2f5d0a7",
+      "size": 1938146496,
+      "version": "4.2",
+      "url": "https://github.com/Wanderer-s-Development/InfinityX-OTA/releases/download/v4.2-breeze-10.11.2026/Project_Infinity-X-4.2-breeze-10.11.2026-GAPPS-RELEASE.zip"
+    }
+  ]
 }
