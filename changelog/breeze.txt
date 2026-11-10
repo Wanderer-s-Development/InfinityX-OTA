@@ -1,34 +1,18 @@
 Project Infinity-X 4.2 for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
-Release Date: 09.11.2026
+Release Date: 10.11.2026
 ========================================================================
 
-Camera & Imaging:
-- Fix Camera Crash (VerifyError in Z5.e.V1): Eliminated Dalvik bytecode corruption in CameraCapabilitiesUtil caused by orphaned instruction units; verified 100% clean on Android Runtime (ART) dex verifier
-- Enable Standalone Document Mode: Configured isSupportDocumentMode1 (P=1) so Document Mode appears and functions crash-free in the camera carousel
-- Fix Regional Watermark: Mapped Indian region (ro.miui.build.region=in and ro.product.mod_device=breeze_in_global) so device watermark dynamically displays "Redmi 13 5G" or "POCO M6 Plus 5G" instead of "Redmi Note 13R 5G"
-- Expose Video Stabilization (EIS) Toggle: Unlocked Movie Solid / EIS switch in Video settings and top bar, keeping it OFF by default so users have full manual control
-- Enable Document Mode: Activated built-in HyperOS document scanning mode (0xba) with full perspective crop and document processing
-- Fix Inverted / Blue Color Defect: Corrected native NV21 chroma plane base offset in libcamera_mianode_jni.xiaomi.so and libcamera_algoup_jni.xiaomi.so (mov w2, #2), eliminating inverted colors and cyan skin tones across all captured photos
-- Fix HDR Controls: Restored HDR toggle button (Auto / On / Off) in HyperOS Camera top bar by bypassing AOSP CamX vendor tag check
-- Enable Auto HDR: Added support_camera_aohdr device feature flag for breeze
-- Fix photo saving pipeline: restored standard isParallel queue handling in MiuiCamera to ensure captured images save reliably to storage
-- Restore continuous 3A convergence (AWB/AE) via camera.disable_zsl_mode=0 for true-to-life color rendering
-- Full support for 108MP Ultra HD mode with hardware remosaic and downscale bypass
-- Include Google Photos prebuilt while preserving Glimpse Gallery
+HyperOS Camera:
+- Completely disabled watermark across capture pipeline and UI
+- Enforced direct Qualcomm hardware JPEG compression (no color/band bugs)
+- Fixed 108MP Ultra HD image saving
+- Fixed Portrait mode bokeh (role 63)
+- Fixed Night mode CamX RAW stability
+- Fixed launch VerifyError and photo save crashes
 
-Radio & Telephony:
-- Revert experimental radio RAT combining and forced dual connectivity properties
-- Fix SIM detected but "No Service" on boot
-- Sync modem procedure byte handling (procedure_bytes=SKIP) and APM power states with stock HyperOS
-
-Display & Power:
-- Correct default peak refresh rate to native 120Hz panel ceiling
-- Enable dynamic refresh rate downscaling with 200ms idle timer
-- Enable asynchronous display power mode for instant screen off
-- Disable Always-On Display (AOD) by default for IPS LCD backlight power saving
-- Restore pickup-to-wake gesture pulse
-
-System & Hardware:
-- Full room-wide Consumer IR blaster range and zero transmission latency via SPI carrier modulation fix
-- Add Novatek and Focaltech touchscreen recovery firmware and touch calibration
-- Integrate official InfinityX-OTA updater endpoints
+System & Device:
+- Clean OTA update metadata matching system build timestamp
+- Native 120Hz display refresh rate with dynamic idle scaling
+- Fixed SIM detection and cellular connectivity
+- Fixed Consumer IR blaster transmission range
+- Upstream Project Infinity-X 4.2 source and security updates
