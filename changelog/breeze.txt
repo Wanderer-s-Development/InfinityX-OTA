@@ -1,18 +1,3 @@
-Project Infinity-X 4.2 for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
-Release Date: 10.11.2026
-========================================================================
-
-HyperOS Camera:
-- Completely disabled watermark across capture pipeline and UI
-- Enforced direct Qualcomm hardware JPEG compression (no color/band bugs)
-- Fixed 108MP Ultra HD image saving
-- Fixed Portrait mode bokeh (role 63)
-- Fixed Night mode CamX RAW stability
-- Fixed launch VerifyError and photo save crashes
-
-System & Device:
-- Clean OTA update metadata matching system build timestamp
-- Native 120Hz display refresh rate with dynamic idle scaling
-- Fixed SIM detection and cellular connectivity
-- Fixed Consumer IR blaster transmission range
-- Upstream Project Infinity-X 4.2 source and security updates
+Halcyon for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
+=========================================================
+Initial release coming soon.
