@@ -1,3 +1,22 @@
-Halcyon for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
-=========================================================
-Initial release coming soon.
+The Clover Project 4.0 for Xiaomi Redmi 13 5G / POCO M6 Plus 5G (breeze)
+Release Date: 11.11.2026
+========================================================================
+
+HyperOS Camera:
+- Completely disabled watermark across capture pipeline and UI
+- Enforced direct Qualcomm hardware JPEG compression (no color/band bugs)
+- Fixed 108MP Ultra HD image saving
+- Fixed Portrait mode bokeh (role 63)
+- Fixed Night mode CamX RAW stability
+- Fixed launch VerifyError and photo save crashes
+
+System & Apps:
+- Official release signed with custom maintainer keys (release-keys)
+- Bundled Google App (Velvet) by default for quick search and home screen QSB
+- Restored Settings Intelligence for full system settings search
+- Fixed Pixel Launcher fatal NullPointerException when opening launcher settings
+- Included swipe gesture typing library (libjni_latinimegoogle) for AOSP keyboard
+- Clean bloatware-free profile with ExactCalculator removed
+- Official OTA updater integration for seamless background system updates
+- Native 120Hz display refresh rate with dynamic idle scaling
+- Full room-wide Consumer IR blaster range and SPI carrier modulation fix

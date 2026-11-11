@@ -1,3 +1,16 @@
 {
-  "response": []
+  "response": [
+    {
+      "datetime": 1794375478,
+      "filename": "CloverProject-4.0-20261111-OFFICIAL-breeze-GMS.zip",
+      "id": "400c7a462f41daadf1e3fa6767fb4796fd0ad53954eaa58db8c0c0c4e86baedb",
+      "os_patch_level": "2026-10-05",
+      "os_sdk_level": 37,
+      "ota_property_files": "payload_metadata.bin:5050:177979,payload.bin:5050:1971912437,payload_properties.txt:1971917545:156,apex_info.pb:2274:1478,care_map.pb:3799:1204,metadata:69:696,metadata.pb:833:1393",
+      "romtype": "OFFICIAL",
+      "size": 1971921026,
+      "url": "https://github.com/Wanderer-s-Development/OTA/releases/download/v4.0-clover-breeze-11.11.2026/CloverProject-4.0-20261111-OFFICIAL-breeze-GMS.zip",
+      "version": "4.0"
+    }
+  ]
 }
